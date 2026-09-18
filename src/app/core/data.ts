@@ -1,0 +1,220 @@
+import { FaqItem, PricingPlan, Vertical } from "./models";
+
+export const PRICING_PLANS: PricingPlan[] = [
+  {
+    id: "free-guest",
+    eyebrow: "Gratis · Sin registro",
+    title: "Empieza ya",
+    highlight: "50 redirecciones sin publicidad",
+    features: [
+      "50 primeras redirecciones sin publicidad",
+      "Después, publicidad en ~30% de las visitas",
+      "Sin tarjeta",
+      "Sin crear cuenta",
+      "Tu QR funciona inmediatamente",
+    ],
+    cta: "Continuar gratis",
+    footnote: "Perfecto para probar Skratme.",
+    accent: "ink",
+  },
+  {
+    id: "free-account",
+    eyebrow: "Gratis para siempre",
+    title: "Con cuenta",
+    highlight: "500 visitas sin publicidad",
+    features: [
+      "Registro gratuito",
+      "500 primeras redirecciones sin publicidad",
+      "Después, publicidad en ~20% de las visitas",
+      "Acceso al panel de estadísticas",
+      "Gestión de tus QR y enlaces",
+      "Cambia el destino del QR cuando quieras",
+      "Sin tarjeta",
+    ],
+    cta: "Crear cuenta gratis",
+    accent: "brand",
+  },
+  {
+    id: "pro",
+    eyebrow: "Pro",
+    title: "Sin publicidad",
+    price: "7€",
+    priceSuffix: "/mes",
+    features: [
+      "0% publicidad",
+      "QR dinámicos",
+      "URLs cortas",
+      "Cambia el destino cuando quieras",
+      "Estadísticas completas",
+      "Gestión de todos tus QR",
+      "Historial de visitas",
+      "Sin límites publicitarios",
+    ],
+    cta: "Empezar con Pro",
+    accent: "amber",
+    badge: "Más popular",
+  },
+  {
+    id: "monetize",
+    eyebrow: "Gana dinero",
+    title: "Monetiza tus QR",
+    highlight: "Hasta 80% de los ingresos para ti",
+    features: [
+      "Skratme conserva un 20% de los ingresos",
+      "Tú decides cuánta publicidad mostrar",
+      "De 20% a 100% de las visitas con anuncios",
+      "Más publicidad = mayor potencial de ingresos",
+      "Estadísticas y control total",
+    ],
+    cta: "Quiero monetizar mis QR",
+    accent: "mint",
+  },
+];
+
+export const VERTICALS_FEATURED: Vertical[] = [
+  {
+    id: "restaurantes",
+    icon: "🍽️",
+    name: "Restaurantes",
+    description: "Bares, cafeterías y restaurantes",
+    examples: ["Carta digital", "Pedir la cuenta", "Reservas", "Avisar al camarero"],
+    cta: "Crear QR para mi restaurante",
+    featured: true,
+  },
+  {
+    id: "peluquerias",
+    icon: "💈",
+    name: "Peluquerías",
+    description: "Estética y belleza",
+    examples: ["Reserva de citas", "Bonos y promociones", "Antes y después", "Fidelización"],
+    cta: "Crear QR para mi negocio",
+    featured: true,
+  },
+  {
+    id: "productos",
+    icon: "📦",
+    name: "Productos",
+    description: "Packaging y retail",
+    examples: ["Ficha técnica", "Manuales y vídeos", "Garantía", "Reseñas"],
+    cta: "Crear QR para mis productos",
+    featured: true,
+  },
+  {
+    id: "alojamientos",
+    icon: "🏨",
+    name: "Alojamientos",
+    description: "Hoteles, apartamentos y casas rurales",
+    examples: ["Check-in digital", "WiFi y normas", "Recomendaciones", "Recepción"],
+    cta: "Crear QR para mi alojamiento",
+    featured: true,
+  },
+  {
+    id: "eventos",
+    icon: "🎉",
+    name: "Eventos",
+    description: "Bodas, ferias y congresos",
+    examples: ["Programa y agenda", "Acreditaciones", "Fotos de invitados", "Networking"],
+    cta: "Crear QR para mi evento",
+    featured: true,
+  },
+  {
+    id: "inmobiliarias",
+    icon: "🏠",
+    name: "Inmobiliarias",
+    description: "Escaparates y carteles",
+    examples: ["Ficha del inmueble", "Visita virtual", "Cálculo de hipoteca", "Captación de leads"],
+    cta: "Crear QR para mis inmuebles",
+    featured: true,
+  },
+];
+
+export const VERTICALS_MORE: Vertical[] = [
+  {
+    id: "gimnasios",
+    icon: "🏋️",
+    name: "Gimnasios",
+    description: "Centros deportivos",
+    examples: ["Reserva de clases", "Rutinas y retos", "Pruebas gratuitas", "Clasificaciones"],
+    cta: "Crear QR para mi centro",
+    featured: false,
+  },
+  {
+    id: "profesionales",
+    icon: "💼",
+    name: "Profesionales",
+    description: "Tarjetas de visita digitales",
+    examples: ["Guardar contacto", "Portfolio", "Reserva de reunión", "WhatsApp directo"],
+    cta: "Crear mi tarjeta QR",
+    featured: false,
+  },
+  {
+    id: "turismo",
+    icon: "🗺️",
+    name: "Turismo y cultura",
+    description: "Museos, rutas y monumentos",
+    examples: ["Audioguías", "Multi-idioma", "Rutas y mapas", "Experiencias gamificadas"],
+    cta: "Crear experiencia turística",
+    featured: false,
+  },
+  {
+    id: "educacion",
+    icon: "🎓",
+    name: "Educación",
+    description: "Colegios, academias y cursos",
+    examples: ["Apuntes y vídeos", "Cuestionarios", "Certificados", "Contacto profesores"],
+    cta: "Crear QR educativo",
+    featured: false,
+  },
+  {
+    id: "automocion",
+    icon: "🚗",
+    name: "Automoción",
+    description: "Concesionarios y talleres",
+    examples: ["Ficha del vehículo", "Financiación", "Reservar cita", "Manual digital"],
+    cta: "Crear QR para mi vehículo",
+    featured: false,
+  },
+];
+
+export const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "¿Tengo que registrarme?",
+    answer: "No. Puedes crear tu primer QR sin registrarte.",
+  },
+  {
+    question: "¿El QR deja de funcionar?",
+    answer: "No, mientras el enlace permanezca activo.",
+  },
+  {
+    question: "¿Puedo cambiar la URL después?",
+    answer: "En los planes que incluyen QR dinámico, sí.",
+  },
+  {
+    question: "¿Qué significa que aparece publicidad?",
+    answer:
+      "En determinados planes gratuitos, algunas visitas pueden mostrar una pantalla publicitaria antes de llegar al destino.",
+  },
+  {
+    question: "¿Tengo que pagar para utilizar Skratme?",
+    answer: "No. Existen planes completamente gratuitos.",
+  },
+  {
+    question: "¿Puedo ganar dinero con mis QR?",
+    answer: "Sí. Puedes activar el modelo de monetización publicitaria.",
+  },
+  {
+    question: "¿Necesito tener página web?",
+    answer: "No. Skratme puede crear experiencias digitales específicas para distintos tipos de negocio.",
+  },
+];
+
+export const COMPARISON_ROWS: { label: string; values: [string, string, string, string] }[] = [
+  { label: "Registro necesario", values: ["No", "Sí", "Sí", "Sí"] },
+  { label: "Visitas sin publicidad", values: ["50", "500", "Ilimitadas", "Configurable"] },
+  { label: "% de publicidad", values: ["~30%", "~20%", "0%", "20%–100%"] },
+  { label: "Estadísticas", values: ["—", "Básicas", "Completas", "Completas"] },
+  { label: "QR dinámico", values: ["—", "Sí", "Sí", "Sí"] },
+  { label: "Cambiar destino", values: ["—", "Sí", "Sí", "Sí"] },
+  { label: "Monetización", values: ["—", "—", "—", "Hasta 80%"] },
+  { label: "Precio", values: ["Gratis", "Gratis", "7€/mes", "Gratis"] },
+];

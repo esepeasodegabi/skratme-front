@@ -1,0 +1,12 @@
+<section class="border-y border-ink-950/[0.06] bg-[#fbfbfd] py-14">
+  <div class="mx-auto max-w-4xl px-5 text-center sm:px-8">
+    <span class="text-[12.5px] font-bold uppercase tracking-wide text-ink-950/35">Próximamente</span>
+    <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+      @for (f of upcoming; track f) {
+        <span class="rounded-full border border-dashed border-ink-950/15 px-3 py-1.5 text-[12.5px] font-medium text-ink-950/45">
+          {{ f }}
+        </span>
+      }
+    </div>
+  </div>
+</section>

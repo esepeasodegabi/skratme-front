@@ -1,0 +1,94 @@
+<section id="analytics" class="bg-[#fbfbfd] py-20 sm:py-28">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-balance text-3xl font-extrabold tracking-tight text-ink-950 sm:text-4xl">
+        No solo sabes que han escaneado tu QR.
+        <br class="hidden sm:block" />
+        Sabes qué ha pasado después.
+      </h2>
+    </div>
+
+    <!-- fake dashboard -->
+    <div class="mt-12 overflow-hidden rounded-3xl border border-ink-950/[0.08] bg-white shadow-card">
+      <div class="flex items-center justify-between border-b border-ink-950/[0.06] px-5 py-3.5 sm:px-6">
+        <div class="flex items-center gap-1.5">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
+        </div>
+        <span class="font-mono text-[12.5px] text-ink-950/35">skrat.me/x7kd2 — estadísticas</span>
+        <span class="text-[12px] font-semibold text-ink-950/30">Últimos 30 días</span>
+      </div>
+
+      <div class="grid grid-cols-1 gap-px bg-ink-950/[0.06] sm:grid-cols-3">
+        @for (s of stats; track s.label) {
+          <div class="bg-white px-6 py-5">
+            <div class="text-[12.5px] font-medium text-ink-950/45">{{ s.label }}</div>
+            <div class="mt-1 flex items-baseline gap-2">
+              <span class="text-2xl font-extrabold text-ink-950">{{ s.value }}</span>
+              <span class="text-[12.5px] font-semibold text-mint-600">{{ s.delta }}</span>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 p-5 sm:grid-cols-[1.4fr_1fr] sm:p-6">
+        <!-- chart -->
+        <div>
+          <div class="text-[13px] font-semibold text-ink-950/55">Evolución de escaneos</div>
+          <div class="mt-4 flex h-32 items-end gap-1.5 sm:h-36">
+            @for (b of bars; track $index) {
+              <div class="flex-1 rounded-t-md bg-gradient-to-t from-brand-500 to-brand-300" [style.height.%]="b"></div>
+            }
+          </div>
+        </div>
+
+        <!-- breakdown -->
+        <div class="flex flex-col gap-5">
+          <div>
+            <div class="text-[13px] font-semibold text-ink-950/55">País</div>
+            <div class="mt-2.5 space-y-2">
+              @for (c of countries; track c.name) {
+                <div class="flex items-center gap-2.5">
+                  <span class="w-16 shrink-0 text-[12.5px] text-ink-950/55">{{ c.name }}</span>
+                  <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-950/[0.06]">
+                    <div class="h-full rounded-full bg-brand-500" [style.width.%]="c.pct"></div>
+                  </div>
+                  <span class="w-8 shrink-0 text-right text-[12px] font-semibold text-ink-950/40">{{ c.pct }}%</span>
+                </div>
+              }
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[13px] font-semibold text-ink-950/55">Dispositivo</div>
+            <div class="mt-2.5 space-y-2">
+              @for (d of devices; track d.name) {
+                <div class="flex items-center gap-2.5">
+                  <span class="w-16 shrink-0 text-[12.5px] text-ink-950/55">{{ d.name }}</span>
+                  <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-950/[0.06]">
+                    <div class="h-full rounded-full bg-mint-500" [style.width.%]="d.pct"></div>
+                  </div>
+                  <span class="w-8 shrink-0 text-right text-[12px] font-semibold text-ink-950/40">{{ d.pct }}%</span>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-x-8 gap-y-2 border-t border-ink-950/[0.06] px-5 py-4 sm:px-6">
+        @for (d of details; track d.label) {
+          <div class="text-[12.5px]">
+            <span class="text-ink-950/40">{{ d.label }}:</span>
+            <span class="ml-1 font-medium text-ink-950/70">{{ d.value }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <p class="mt-4 text-center text-[12.5px] text-ink-950/35">
+      Datos de ejemplo con fines ilustrativos.
+    </p>
+  </div>
+</section>

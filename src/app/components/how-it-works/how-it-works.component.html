@@ -1,0 +1,33 @@
+<section id="how-it-works" class="bg-[#fbfbfd] py-20 sm:py-28">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8">
+    <div class="mx-auto max-w-xl text-center">
+      <h2 class="text-balance text-3xl font-extrabold tracking-tight text-ink-950 sm:text-4xl">
+        Un QR. Muchas posibilidades.
+      </h2>
+    </div>
+
+    <!-- flow -->
+    <div class="relative mt-14 grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-3">
+      <div class="pointer-events-none absolute left-0 right-0 top-[38px] hidden h-px bg-gradient-to-r from-transparent via-ink-950/10 to-transparent sm:block"></div>
+      @for (step of steps; track step.n) {
+        <div class="relative flex flex-col items-center rounded-2xl bg-white p-5 text-center shadow-soft sm:bg-transparent sm:p-2 sm:shadow-none">
+          <div class="flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-white text-xl font-extrabold text-ink-950 shadow-card ring-1 ring-ink-950/[0.06]">
+            {{ step.n }}
+          </div>
+          <h3 class="mt-4 text-[15px] font-bold text-ink-950">{{ step.title }}</h3>
+          <p class="mt-1 text-[13.5px] text-ink-950/50">{{ step.desc }}</p>
+        </div>
+      }
+    </div>
+
+    <!-- use cases -->
+    <div class="mt-16 flex flex-wrap items-center justify-center gap-2.5">
+      @for (uc of useCases; track uc.label) {
+        <span class="flex items-center gap-1.5 rounded-full border border-ink-950/[0.08] bg-white px-3.5 py-2 text-[13px] font-medium text-ink-950/70 shadow-soft transition hover:-translate-y-0.5 hover:shadow-card">
+          <span>{{ uc.icon }}</span>
+          {{ uc.label }}
+        </span>
+      }
+    </div>
+  </div>
+</section>
